@@ -32,19 +32,19 @@ class LostA_servers:
                 if server.find('div',
                                class_='ags-ServerStatus-content-responses-response-server-status '
                                       'ags-ServerStatus-content-responses-response-server-status--good'):
-                    new_status[server_name] = 'ok'
+                    new_status['status'] = 'ok'
                 if server.find('div',
                                class_='ags-ServerStatus-content-responses-response-server-status '
                                       'ags-ServerStatus-content-responses-response-server-status--busy'):
-                    new_status[server_name] = 'busy'
+                    new_status['status'] = 'busy'
                 if server.find('div',
                                class_='ags-ServerStatus-content-responses-response-server-status '
                                       'ags-ServerStatus-content-responses-response-server-status--maintenance'):
-                    new_status[server_name] = 'maintenance ️'
+                    new_status['status'] = 'maintenance'
                 if server.find('div',
                                class_='ags-ServerStatus-content-responses-response-server-status '
                                       'ags-ServerStatus-content-responses-response-server-status--full'):
-                    new_status[server_name] = 'full'
+                    new_status['status'] = 'full'
 
         data = {"status": status, "data": new_status}
 
