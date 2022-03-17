@@ -32,19 +32,19 @@ class LostA_servers:
                 if server.find('div',
                                class_='ags-ServerStatus-content-responses-response-server-status '
                                       'ags-ServerStatus-content-responses-response-server-status--good'):
-                    new_status[server_name] = '✅ Ok'
+                    new_status[server_name] = 'ok'
                 if server.find('div',
                                class_='ags-ServerStatus-content-responses-response-server-status '
                                       'ags-ServerStatus-content-responses-response-server-status--busy'):
-                    new_status[server_name] = '❌ Busy'
+                    new_status[server_name] = 'busy'
                 if server.find('div',
                                class_='ags-ServerStatus-content-responses-response-server-status '
                                       'ags-ServerStatus-content-responses-response-server-status--maintenance'):
-                    new_status[server_name] = '🛠️ Maintenance ️'
+                    new_status[server_name] = 'maintenance ️'
                 if server.find('div',
                                class_='ags-ServerStatus-content-responses-response-server-status '
                                       'ags-ServerStatus-content-responses-response-server-status--full'):
-                    new_status[server_name] = '⚠️ Full'
+                    new_status[server_name] = 'full'
 
         data = {"status": status, "data": new_status}
 
@@ -78,19 +78,19 @@ class LostA_servers:
             if server.find('div',
                            class_='ags-ServerStatus-content-responses-response-server-status '
                                   'ags-ServerStatus-content-responses-response-server-status--good'):
-                new_status[server_name] = '✅ Ok'
+                new_status[server_name] = 'ok'
             if server.find('div',
                            class_='ags-ServerStatus-content-responses-response-server-status '
                                   'ags-ServerStatus-content-responses-response-server-status--busy'):
-                new_status[server_name] = '❌ Busy'
+                new_status[server_name] = 'busy'
             if server.find('div',
                            class_='ags-ServerStatus-content-responses-response-server-status '
                                   'ags-ServerStatus-content-responses-response-server-status--maintenance'):
-                new_status[server_name] = '🛠️ Maintenance'
+                new_status[server_name] = 'maintenance'
             if server.find('div',
                            class_='ags-ServerStatus-content-responses-response-server-status '
                                   'ags-ServerStatus-content-responses-response-server-status--full'):
-                new_status[server_name] = '⚠️ Full'
+                new_status[server_name] = 'full'
 
         data = {"status": status, "data": new_status}
 

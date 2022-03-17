@@ -15,8 +15,8 @@ def get_la_forums():
 
 class LostA:
     @staticmethod
-    def news(tag):
-        URL = f"https://www.playlostark.com/en-us/news?tag={tag}"
+    def news(language, tag):
+        URL = f"https://www.playlostark.com/{language}/news?tag={tag}"
         status = get_status(URL)
         response = get_soup(URL)
 

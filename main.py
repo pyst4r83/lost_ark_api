@@ -34,8 +34,8 @@ TWO_MINUTES = 150
 
 
 @limits(calls=250, period=TWO_MINUTES)
-@app.get("/news/{tag}", tags=["News"])
-def lost_ark_news(tag):
+@app.get("/news/{language}/{tag}", tags=["News"])
+def lost_ark_news(language, tag):
     """[categories]\n\n
 
     updates \n
@@ -43,7 +43,7 @@ def lost_ark_news(tag):
     release-notes\n
     general\n
     """
-    return lost_ark.news(tag)
+    return lost_ark.news(language, tag)
 
 
 @limits(calls=250, period=TWO_MINUTES)
