@@ -96,7 +96,7 @@ class LostA_servers:
                                   'ags-ServerStatus-content-responses-response-server-status--full'):
                 new_status[server_name] = 'full'
 
-        data = {"status": status, "data": {new_status}}
+        data = {"status": status, "data": new_status}
 
         if status != 200:
             raise Exception("API response: {}".format(status))
